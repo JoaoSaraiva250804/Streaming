@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101114;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    height: 70px;
+    background: #17191e;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 0 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.logo img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ddd;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.busca {
+    margin-left: auto;
+    display: flex;
+    background: #24262d;
+}
+
+.busca input {
+    width: 190px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: white;
+}
+
+.busca span {
+    padding: 9px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1,
+h2 {
+    margin-bottom: 18px;
+}
+
+/* Filme em destaque */
+
+.filme-destaque {
+    width: 100%;
+    min-height: 360px;
+
+    display: flex;
+    align-items: end;
+
+    padding: 35px;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, .85),
+            rgba(0, 0, 0, .25)
+        ),
+        url("../img/filmedestaque/moulinrouge.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 10px;
+}
+
+.filme-destaque div {
+    max-width: 600px;
+}
+
+.filme-destaque h1 {
+    font-size: 36px;
+}
+
+.filme-destaque p {
+    margin: 8px 0;
+    color: #ddd;
+}
+
+/* TOP 3 */
+
+.top3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Grades */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    display: block;
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.card p {
+    color: #aaa;
+    margin-top: 4px;
+}
+
+/* Número do TOP 3 */
+
+.ranking span {
+    position: absolute;
+    z-index: 1;
+    left: 8px;
+    top: 0;
+
+    font-size: 55px;
+    font-weight: bold;
+
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Títulos */
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo a {
+    color: #aaa;
+}
+
+.titulo a:hover {
+    color: white;
+}
+
+/* Rodapé */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #17191e;
+    color: #aaa;
+    margin-top: 40px;
+}
+
+/* Página modelo */
+
+.modelo {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+
+    background: #181a20;
+    border-radius: 8px;
+}
+
+.modelo > img {
+    width: 230px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modelo div {
+    padding-top: 10px;
+}
+
+.modelo span {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.modelo h1 {
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.modelo p {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.modelo button,
+.comentarios button {
+    background: #e50914;
+    color: white;
+    border: 0;
+    padding: 9px 16px;
+    border-radius: 4px;
+}
+
+/* Comentários */
+
+.comentarios {
+    padding: 25px;
+    background: #181a20;
+}
+
+.comentarios textarea {
+    display: block;
+    width: 100%;
+    height: 100px;
+
+    margin: 15px 0;
+    padding: 12px;
+
+    background: #24262d;
+    border: 0;
+    color: white;
+
+    resize: none;
+}
+
+.comentarios button {
+    cursor: pointer;
+}
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .busca {
+        margin-left: 0;
+    }
+
+    .top3,
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modelo {
+        flex-direction: column;
+    }
+
+    .modelo > img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .top3,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filme-destaque {
+        min-height: 400px;
+        padding: 20px;
+    }
+
+    .filme-destaque h1 {
+        font-size: 28px;
+    }
+}
