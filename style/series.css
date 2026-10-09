@@ -1,0 +1,59 @@
+.catalogo {
+max-width: 1200px;
+margin: 0 auto;
+padding: 35px 20px;
+}
+
+.catalogo h1 {
+font-size: 2.5rem;
+margin-bottom: 30px;
+border-left: 5px solid #e50914; 
+padding-left: 15px;
+}
+
+.grade {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 24px;
+}
+
+.item-serie {
+background-color: #1a1e2b;
+border-radius: 8px;
+overflow: hidden;
+text-decoration: none;
+color: inherit;
+display: flex;
+flex-direction: column;
+border: 1px solid #262c3d;
+transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.item-serie:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+border-color: #3b455e;
+}
+
+.item-serie img {
+width: 100%;
+height: 260px;
+object-fit: cover;
+display: block;
+}
+
+.item-serie h3 {
+font-size: 0.95rem;
+font-weight: 600;
+padding: 12px 12px 2px 12px;
+color: #ffffff;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.item-serie p {
+font-size: 0.82rem;
+color: #838b9e;
+padding: 0 12px 12px 12px;
+}
